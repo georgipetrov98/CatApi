@@ -44,7 +44,7 @@ function Fetch(){
     .then(data => {
 
       if (i < 0) {
-        i = 66
+        i = data.length - 1;
         let countryCode = data[i].country_code;
   
       let imgUrl = data[i].image.url;
@@ -73,7 +73,7 @@ function Fetch(){
   
       let ImgElement  = document.getElementById('imgElement');
       ImgElement.src = (`${imgUrl}`)
-      } if (i >66) {
+      } if (i > data.length - 1) {
         i = 0;
         let countryCode = data[i].country_code;
   
